@@ -16,6 +16,7 @@ const routes: Routes = [
 	{ path: 'galerie', component: GalerieComponent },
 	{ path: 'contact', component: ContactComponent },
 	{ path: 'cgv', component: CgvComponent },
+	{ path: '**', component: HomeComponent },
 ];
 
 @NgModule({

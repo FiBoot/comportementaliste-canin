@@ -1,4 +1,46 @@
+@import '/src/styles/default.scss';
+
+.container {
+	background-color: $blockColor;
+}
+
+.container .col {
+	padding: $paddingWidth 0;
+	color: $blockTextColor;
+	text-align: center;
+    text-decoration: none;
+	cursor: pointer;
+}
+.container .col:hover {
+	background-color: $hoverColor;
+	color: $textHoverColor;
+}
+.container .col:active {
+	background-color: $hoverColor;
+	color: $textActiveColor;
+}
+.container .col.active {
+	color: $textActiveColor
+}
+
+ul {
+	background-color: $blockColor;
+	margin: 0;
+	padding: $paddingWidth 0;
+}
 ul > li {
 	display: inline-block;
-    padding: 10px;
+}
+li > a {
+	padding: $paddingWidth $paddingWidth * 2;
+	color: $blockTextColor;
+	text-decoration: none;
+}
+li > a:hover,
+li > a.active {
+	background-color: $hoverColor;
+	color: $textHoverColor;
+}
+li > a:active {
+	background-color: $activeColor;
 }
