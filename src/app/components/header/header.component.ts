@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 @Component({
 	selector: 'app-header',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-	public routeList = [
+	public routes = [
 		{ path: '', name: 'Home', active: false },
 		{ path: 'a-propos', name: 'A propos', active: false },
 		{ path: 'diplomes', name: 'Diplomes', active: false },
@@ -16,12 +17,16 @@ export class HeaderComponent implements OnInit {
 		{ path: 'cgv', name: 'CGV', active: false },
 	];
 
+	constructor(private router: Router) {}
+
 	ngOnInit(): void {
-		const currentPath = window.location.pathname.slice(1, window.location.pathname.length);
-		for (let route of this.routeList) {
-			if (route.path === currentPath) {
-        route.active = true;
+		this.router.events.subscribe((event) => {
+			if (event instanceof NavigationEnd) {
+				const path = event.url.slice(1, event.url.length);
+				for (let route of this.routes) {
+					route.active = route.path === path
+				}
 			}
-		}
+		});
 	}
 }

@@ -9,6 +9,7 @@
 	color: $blockTextColor;
 	text-align: center;
     text-decoration: none;
+	font-weight: bold;
 	cursor: pointer;
 }
 .container .col:hover {
@@ -16,31 +17,9 @@
 	color: $textHoverColor;
 }
 .container .col:active {
-	background-color: $hoverColor;
-	color: $textActiveColor;
+	background-color: $activeColor;
 }
 .container .col.active {
-	color: $textActiveColor
-}
-
-ul {
-	background-color: $blockColor;
-	margin: 0;
-	padding: $paddingWidth 0;
-}
-ul > li {
-	display: inline-block;
-}
-li > a {
-	padding: $paddingWidth $paddingWidth * 2;
-	color: $blockTextColor;
-	text-decoration: none;
-}
-li > a:hover,
-li > a.active {
 	background-color: $hoverColor;
-	color: $textHoverColor;
-}
-li > a:active {
-	background-color: $activeColor;
+	color: $textActiveColor
 }
