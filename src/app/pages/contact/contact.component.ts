@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MailService } from 'src/app/services/mail.service';
 
 @Component({
 	selector: 'app-contact',
@@ -18,21 +19,26 @@ export class ContactComponent {
 		city: new FormControl('', Validators.required),
 		phone_number: new FormControl('', [Validators.pattern(/^\+?(\d{2} ?){5}$/), Validators.required]),
 		message: new FormControl('', Validators.required),
-		emergency: new FormControl(false)
+		emergency: new FormControl(false),
 	});
+	public sendingForm: boolean = false;
 	private formTouched: boolean = false;
+
+	constructor(private mailService: MailService) {}
 
 	public isControlValid(controlName: string): boolean {
 		const touched = this.contactForm.controls[controlName].touched || this.formTouched;
-		const errors = this.contactForm.controls[controlName].errors ? true : false
+		const errors = this.contactForm.controls[controlName].errors ? true : false;
 		return touched && errors;
 	}
 
 	public onSubmit(form: FormGroup): void {
 		this.formTouched = true;
-		if (this.contactForm.valid) {
-			console.warn('OK')
-		}
-		console.log(form);
+		// if (form.valid) {
+		this.sendingForm = true;
+		this.mailService.sendFormContactMail(form).then((response) => {
+			this.sendingForm = false;
+		});
+		// }
 	}
 }

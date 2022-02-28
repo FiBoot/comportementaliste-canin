@@ -111,7 +111,7 @@
 
 		<div class="form-group">
 			<label>Message</label>
-			<textarea formControlName="message" class="form-control" [class.is-invalid]="isControlValid('message')" placeholder="Email message" required></textarea>
+			<textarea formControlName="message" class="form-control" [class.is-invalid]="isControlValid('message')" placeholder="Message" required></textarea>
 			<small id="emailHelp" class="form-text text-muted">
 				<b>Indiquer si vous avez des enfants, personnes faibles ou en situation de handicap</b>
 			</small>
@@ -125,7 +125,7 @@
 				</div>
 			</div>
 			<div class="form-group col-4 align-right">
-				<button type="submit" class="btn btn-success">Send</button>
+				<button type="submit" class="btn btn-success" [disabled]="sendingForm">Send</button>
 			</div>
 		</div>
 	</form>

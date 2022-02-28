@@ -1,25 +1,21 @@
 @import '/src/styles/default.scss';
 
-.header {
-	background-color: $blockColor;
-}
-
 .header .route {
 	padding: $defaultSize 0;
-	color: $blockTextColor;
+	// color: ;
 	text-align: center;
     text-decoration: none;
 	font-weight: bold;
 	cursor: pointer;
 }
 .header .route:hover {
-	background-color: $hoverColor;
-	color: $textHoverColor;
+	// background-color: $hoverColor;
+	// color: $textHoverColor;
 }
 .header .route:active {
-	background-color: $activeColor;
+	// background-color: $activeColor;
 }
 .header .route.active {
-	background-color: $hoverColor;
-	color: $textActiveColor
+	// background-color: $hoverColor;
+	// color: $textActiveColor
 }
