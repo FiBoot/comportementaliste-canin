@@ -1,21 +1,34 @@
 @import '/src/styles/default.scss';
 
+.header {
+	margin-bottom: $bigSize;
+}
+
+.header .logo {
+	width: 100%;
+	height: 100%;
+	background-image: url('/assets/logo.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
 .header .route {
 	padding: $defaultSize 0;
-	// color: ;
+	color: $mainColor2;
 	text-align: center;
-    text-decoration: none;
+	text-decoration: none;
+	text-transform: uppercase;
 	font-weight: bold;
 	cursor: pointer;
 }
+.header .route span {
+	padding: $extraSmallSize;
+}
 .header .route:hover {
-	// background-color: $hoverColor;
-	// color: $textHoverColor;
+	color: $mainColor1;
 }
 .header .route:active {
-	// background-color: $activeColor;
 }
-.header .route.active {
-	// background-color: $hoverColor;
-	// color: $textActiveColor
+.header .route.active span {
+	border-bottom: $extraSmallSize $extraColor solid;
 }

@@ -1,6 +1,13 @@
 @import '/src/styles/default.scss';
 
+.footer-placeholder {
+	height: $bigSize + $smallSize;
+}
 .footer {
-	margin-top: $defaultSize;
-	// background-color: $blockColor;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: $smallSize;
+	background-color: $backgroundColor;
+	box-shadow: 0 0 $bigSize $backgroundColor;
 }

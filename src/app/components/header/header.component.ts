@@ -8,24 +8,23 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 	public routes = [
-		{ path: '', name: 'Home', active: false },
 		{ path: 'a-propos', name: 'A propos', active: false },
-		{ path: 'tarifs', name: 'Tarifs', active: false },
+		{ path: 'tarifs', name: 'Prestations et service', active: false },
 		{ path: 'galerie', name: 'Galerie', active: false },
 		{ path: 'contact', name: 'Contact', active: false },
-		{ path: 'cgv', name: 'CGV', active: false },
 	];
+	private currentPath: string = '';
 
 	constructor(private router: Router) {}
 
 	ngOnInit(): void {
 		this.router.events.subscribe((event) => {
 			if (event instanceof NavigationEnd) {
-				const path = event.url.slice(1, event.url.length);
-				for (let route of this.routes) {
-					route.active = route.path === path
-				}
+				this.currentPath = event.url.slice(1, event.url.length);
 			}
 		});
+	}
+	public isActive(path: string): boolean {
+		return path === this.currentPath;
 	}
 }

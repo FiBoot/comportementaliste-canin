@@ -1,14 +1,28 @@
-<div class="header container">
-	<div class="row">
-		<div class="col">
-			<a class="logo" [routerLink]="''"></a>
+<div class="header container-fluid">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<a [routerLink]="''">
+					<div class="logo"></div>
+				</a>
+			</div>
+			<a class="route col" [class.active]="isActive('a-propos')" [routerLink]="'a-propos'">
+				<span>a propos</span>
+			</a>
+			<a class="route col" [class.active]="isActive('tarifs')" [routerLink]="'tarifs'">
+				<!-- <span>prestations et services</span> -->
+				<span class="d-xl-none">tarifs</span>
+				<span class="d-none d-xl-inline">prestations et services</span>
+			</a>
+			<a class="route col" [class.active]="isActive('galerie')" [routerLink]="'galerie'">
+				<span>galerie</span>
+			</a>
+			<a class="route col" [class.active]="isActive('contact')" [routerLink]="'contact'">
+				<span>contact</span>
+			</a>
+			<!-- <a *ngFor="let route of routes" class="route col" [class.active]="route?.active" [routerLink]="route.path"> -->
+			<!-- <span>{{ route.name }}</span> -->
+			<!-- </a> -->
 		</div>
-		<a
-			*ngFor="let route of routes"
-			class="route col"
-			[class.active]="route?.active"
-			[routerLink]="route.path"
-			>{{ route.name }}</a
-		>
 	</div>
 </div>

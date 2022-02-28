@@ -1,10 +1,4 @@
 <div class="container">
-	<div class="row">
-		<div class="col">
-			<h3>Contact</h3>
-		</div>
-	</div>
-
 	<form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
 		<div class="form-row">
 			<div class="form-group col-md-6">
@@ -111,7 +105,13 @@
 
 		<div class="form-group">
 			<label>Message</label>
-			<textarea formControlName="message" class="form-control" [class.is-invalid]="isControlValid('message')" placeholder="Message" required></textarea>
+			<textarea
+				formControlName="message"
+				class="form-control"
+				[class.is-invalid]="isControlValid('message')"
+				placeholder="Message"
+				required
+			></textarea>
 			<small id="emailHelp" class="form-text text-muted">
 				<b>Indiquer si vous avez des enfants, personnes faibles ou en situation de handicap</b>
 			</small>
