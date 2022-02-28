@@ -14,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MailService } from './services/mail.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ParallaxModule } from 'ngx-parallax';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ParallaxModule
   ],
   providers: [
     HttpClient,

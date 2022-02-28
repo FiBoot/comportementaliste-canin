@@ -10,7 +10,6 @@
 				<span>a propos</span>
 			</a>
 			<a class="route col" [class.active]="isActive('tarifs')" [routerLink]="'tarifs'">
-				<!-- <span>prestations et services</span> -->
 				<span class="d-xl-none">tarifs</span>
 				<span class="d-none d-xl-inline">prestations et services</span>
 			</a>
@@ -20,9 +19,6 @@
 			<a class="route col" [class.active]="isActive('contact')" [routerLink]="'contact'">
 				<span>contact</span>
 			</a>
-			<!-- <a *ngFor="let route of routes" class="route col" [class.active]="route?.active" [routerLink]="route.path"> -->
-			<!-- <span>{{ route.name }}</span> -->
-			<!-- </a> -->
 		</div>
 	</div>
 </div>

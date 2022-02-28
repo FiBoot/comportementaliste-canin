@@ -28,7 +28,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/assets/favicon.ico",
-              "src/assets/logo.jpg"
+              "src/assets/logo.jpg",
+              "src/assets/parallax.jpg"
             ],
             "styles": [
               "src/styles/styles.scss",
