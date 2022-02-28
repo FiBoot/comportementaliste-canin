@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AProposComponent } from './pages/a-propos/a-propos.component';
-import { DiplomesComponent } from './pages/diplomes/diplomes.component';
 import { TarifsComponent } from './pages/tarifs/tarifs.component';
 import { GalerieComponent } from './pages/galerie/galerie.component';
 import { ContactComponent } from './pages/contact/contact.component';
@@ -19,7 +18,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     HomeComponent,
     AProposComponent,
-    DiplomesComponent,
     TarifsComponent,
     GalerieComponent,
     ContactComponent,
