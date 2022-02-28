@@ -16,8 +16,8 @@ export class ContactComponent {
 		address: new FormControl('', Validators.required),
 		zipcode: new FormControl('', [Validators.min(1), Validators.required]),
 		city: new FormControl('', Validators.required),
-		phone_number: new FormControl('', [Validators.pattern(/^\+?(\d{2}){5}$/), Validators.required]),
-		message: new FormControl(''),
+		phone_number: new FormControl('', [Validators.pattern(/^\+?(\d{2} ?){5}$/), Validators.required]),
+		message: new FormControl('', Validators.required),
 		emergency: new FormControl(false)
 	});
 	private formTouched: boolean = false;

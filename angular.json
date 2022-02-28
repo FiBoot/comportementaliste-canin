@@ -32,7 +32,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/bootstrap.min.css"
+              "src/others/bootstrap.min.css"
             ],
             "scripts": []
           },
