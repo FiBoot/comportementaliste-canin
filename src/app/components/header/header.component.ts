@@ -10,7 +10,6 @@ export class HeaderComponent implements OnInit {
 	public routes = [
 		{ path: '', name: 'Home', active: false },
 		{ path: 'a-propos', name: 'A propos', active: false },
-		{ path: 'diplomes', name: 'Diplomes', active: false },
 		{ path: 'tarifs', name: 'Tarifs', active: false },
 		{ path: 'galerie', name: 'Galerie', active: false },
 		{ path: 'contact', name: 'Contact', active: false },
