@@ -1,1 +1,128 @@
-<p>contact works!</p>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h3>Contact</h3>
+		</div>
+	</div>
+
+	<form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
+		<div class="form-row">
+			<div class="form-group col-md-3">
+				<label>Lastname</label>
+				<input
+					formControlName="lastname"
+					class="form-control"
+					[class.is-invalid]="isControlValid('lastname')"
+					placeholder="Doe"
+				/>
+			</div>
+			<div class="form-group col-md-3">
+				<label>Firstname</label>
+				<input
+					formControlName="firstname"
+					class="form-control"
+					[class.is-invalid]="isControlValid('firstname')"
+					placeholder="John"
+				/>
+			</div>
+			<div class="form-group col-md-6">
+				<label>Email</label>
+				<input
+					formControlName="email"
+					class="form-control"
+					[class.is-invalid]="isControlValid('email')"
+					placeholder="john.doe@gmail.com"
+				/>
+			</div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label>Dog bread</label>
+				<input
+					formControlName="dogbread"
+					class="form-control"
+					[class.is-invalid]="isControlValid('dogbread')"
+					placeholder="Ratier"
+				/>
+			</div>
+			<div class="form-group col-md-6">
+				<label>Dog age</label>
+				<input
+					formControlName="dogage"
+					type="number"
+					class="form-control"
+					[class.is-invalid]="isControlValid('dogage')"
+					placeholder="3"
+				/>
+			</div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label>Address</label>
+				<input
+					formControlName="address"
+					class="form-control"
+					[class.is-invalid]="isControlValid('address')"
+					placeholder="1 rue de la paix"
+				/>
+			</div>
+			<div class="form-group col-md-6">
+				<label>Phone number</label>
+				<input
+					formControlName="phonenumber"
+					type="number"
+					class="form-control"
+					[class.is-invalid]="isControlValid('phonenumber')"
+					placeholder="0123456789"
+				/>
+			</div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label>Zipcode</label>
+				<input
+					formControlName="zipcode"
+					type="number"
+					class="form-control"
+					[class.is-invalid]="isControlValid('zipcode')"
+					placeholder="75000"
+				/>
+			</div>
+			<div class="form-group col-md-6">
+				<label>City</label>
+				<input
+					formControlName="city"
+					class="form-control"
+					[class.is-invalid]="isControlValid('city')"
+					placeholder="Paris"
+				/>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label>Message</label>
+			<textarea formControlName="message" class="form-control" placeholder="Email message"></textarea>
+		</div>
+
+		<div class="form-row">
+			<div class="form-group col-md-3">
+				<div class="form-check">
+					<input formControlName="haschild" type="checkbox" class="form-check-input" />
+					<label class="form-check-label">Has child</label>
+				</div>
+			</div>
+			<div class="form-group col-md-3">
+				<div class="form-check">
+					<input formControlName="city" type="checkbox" class="form-check-input" />
+					<label class="form-check-label">Has handicap</label>
+				</div>
+			</div>
+			<div class="form-group col-md-6 align-right">
+				<button type="submit" class="btn btn-success">Send</button>
+			</div>
+		</div>
+	</form>
+</div>

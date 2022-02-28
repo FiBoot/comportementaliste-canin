@@ -1,25 +1,25 @@
 @import '/src/styles/default.scss';
 
-.container {
+.header {
 	background-color: $blockColor;
 }
 
-.container .col {
-	padding: $paddingWidth 0;
+.header .route {
+	padding: $defaultSize 0;
 	color: $blockTextColor;
 	text-align: center;
     text-decoration: none;
 	font-weight: bold;
 	cursor: pointer;
 }
-.container .col:hover {
+.header .route:hover {
 	background-color: $hoverColor;
 	color: $textHoverColor;
 }
-.container .col:active {
+.header .route:active {
 	background-color: $activeColor;
 }
-.container .col.active {
+.header .route.active {
 	background-color: $hoverColor;
 	color: $textActiveColor
 }
