@@ -11,15 +11,14 @@ export class ContactComponent {
 		lastname: new FormControl('', Validators.required),
 		firstname: new FormControl('', Validators.required),
 		email: new FormControl('', [Validators.email, Validators.required]),
-		dogbread: new FormControl('', Validators.required),
-		dogage: new FormControl(0, [Validators.min(1), Validators.required]),
+		dog_bread: new FormControl('', Validators.required),
+		dog_age: new FormControl(0, [Validators.min(1), Validators.required]),
 		address: new FormControl('', Validators.required),
-		zipcode: new FormControl(0, [Validators.min(1), Validators.required]),
+		zipcode: new FormControl('', [Validators.min(1), Validators.required]),
 		city: new FormControl('', Validators.required),
-		phonenumber: new FormControl('', [Validators.pattern(/^\+?(\d{2}){5}$/), Validators.required]),
+		phone_number: new FormControl('', [Validators.pattern(/^\+?(\d{2}){5}$/), Validators.required]),
 		message: new FormControl(''),
-		haschild: new FormControl(false),
-		hashandicap: new FormControl(false),
+		emergency: new FormControl(false)
 	});
 	private formTouched: boolean = false;
 

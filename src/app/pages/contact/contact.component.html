@@ -7,24 +7,29 @@
 
 	<form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
 		<div class="form-row">
-			<div class="form-group col-md-3">
-				<label>Lastname</label>
+			<div class="form-group col-md-6">
+				<label>Nom</label>
 				<input
 					formControlName="lastname"
 					class="form-control"
 					[class.is-invalid]="isControlValid('lastname')"
 					placeholder="Doe"
+					required
 				/>
 			</div>
-			<div class="form-group col-md-3">
-				<label>Firstname</label>
+			<div class="form-group col-md-6">
+				<label>Prénom</label>
 				<input
 					formControlName="firstname"
 					class="form-control"
 					[class.is-invalid]="isControlValid('firstname')"
 					placeholder="John"
+					required
 				/>
 			</div>
+		</div>
+
+		<div class="form-row">
 			<div class="form-group col-md-6">
 				<label>Email</label>
 				<input
@@ -32,97 +37,87 @@
 					class="form-control"
 					[class.is-invalid]="isControlValid('email')"
 					placeholder="john.doe@gmail.com"
-				/>
-			</div>
-		</div>
-
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label>Dog bread</label>
-				<input
-					formControlName="dogbread"
-					class="form-control"
-					[class.is-invalid]="isControlValid('dogbread')"
-					placeholder="Ratier"
+					required
 				/>
 			</div>
 			<div class="form-group col-md-6">
-				<label>Dog age</label>
-				<input
-					formControlName="dogage"
-					type="number"
-					class="form-control"
-					[class.is-invalid]="isControlValid('dogage')"
-					placeholder="3"
-				/>
-			</div>
-		</div>
-
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label>Address</label>
-				<input
-					formControlName="address"
-					class="form-control"
-					[class.is-invalid]="isControlValid('address')"
-					placeholder="1 rue de la paix"
-				/>
-			</div>
-			<div class="form-group col-md-6">
-				<label>Phone number</label>
+				<label>Téléphone</label>
 				<input
 					formControlName="phonenumber"
 					type="number"
 					class="form-control"
 					[class.is-invalid]="isControlValid('phonenumber')"
 					placeholder="0123456789"
+					required
 				/>
 			</div>
 		</div>
 
 		<div class="form-row">
 			<div class="form-group col-md-6">
-				<label>Zipcode</label>
+				<label>Race du chien</label>
 				<input
-					formControlName="zipcode"
-					type="number"
+					formControlName="dogbread"
 					class="form-control"
-					[class.is-invalid]="isControlValid('zipcode')"
-					placeholder="75000"
+					[class.is-invalid]="isControlValid('dogbread')"
+					placeholder="Ratier"
+					required
 				/>
 			</div>
 			<div class="form-group col-md-6">
-				<label>City</label>
+				<label>Age du chien</label>
+				<input
+					formControlName="dogage"
+					type="number"
+					class="form-control"
+					[class.is-invalid]="isControlValid('dogage')"
+					placeholder="3"
+					required
+				/>
+			</div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label>Adresse</label>
+				<input
+					formControlName="address"
+					class="form-control"
+					[class.is-invalid]="isControlValid('address')"
+					placeholder="1 rue de la paix"
+					required
+				/>
+			</div>
+			<div class="form-group col-md-3">
+				<label>Ville</label>
 				<input
 					formControlName="city"
 					class="form-control"
 					[class.is-invalid]="isControlValid('city')"
 					placeholder="Paris"
+					required
+				/>
+			</div>
+			<div class="form-group col-md-3">
+				<label>Code postal</label>
+				<input
+					formControlName="zipcode"
+					class="form-control"
+					[class.is-invalid]="isControlValid('zipcode')"
+					placeholder="75000"
+					required
 				/>
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label>Message</label>
-			<textarea formControlName="message" class="form-control" placeholder="Email message"></textarea>
+			<textarea formControlName="message" class="form-control" placeholder="Email message" required></textarea>
+			<div class="feedback">Indiquez si handicap</div>
 		</div>
 
-		<div class="form-row">
-			<div class="form-group col-md-3">
-				<div class="form-check">
-					<input formControlName="haschild" type="checkbox" class="form-check-input" />
-					<label class="form-check-label">Has child</label>
-				</div>
-			</div>
-			<div class="form-group col-md-3">
-				<div class="form-check">
-					<input formControlName="city" type="checkbox" class="form-check-input" />
-					<label class="form-check-label">Has handicap</label>
-				</div>
-			</div>
-			<div class="form-group col-md-6 align-right">
-				<button type="submit" class="btn btn-success">Send</button>
-			</div>
+		<div class="form-group align-right">
+			<button type="submit" class="btn btn-success">Send</button>
 		</div>
 	</form>
 </div>
