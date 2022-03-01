@@ -21,10 +21,10 @@
 	padding: $size / 4;
 }
 .header .route:hover {
-	color: $mainColor1;
+	color: $defaultColor;
 }
 .header .route:active {
 }
 .header .route.active span {
-	border-bottom: $size / 4 $extraColor solid;
+	border-bottom: ($size / 5) $extraColor solid;
 }

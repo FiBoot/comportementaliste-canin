@@ -1,0 +1,9 @@
+@import '/src/styles/default.scss';
+
+.image {
+    width: 100%;
+    height: $size * 15;
+    background-image: url('/assets/tarif-card.png');
+	background-position: center;
+	background-size: cover;
+}

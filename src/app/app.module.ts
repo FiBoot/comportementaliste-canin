@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MailService } from './services/mail.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ParallaxModule } from 'ngx-parallax';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -11,10 +16,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { CgvComponent } from './pages/cgv/cgv.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MailService } from './services/mail.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { ParallaxModule } from 'ngx-parallax';
+import { TarifCardComponent } from './components/tarif-card/tarif-card.component';
 
 @NgModule({
 	declarations: [
@@ -27,6 +29,7 @@ import { ParallaxModule } from 'ngx-parallax';
 		CgvComponent,
 		HeaderComponent,
 		FooterComponent,
+  		TarifCardComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -36,7 +39,10 @@ import { ParallaxModule } from 'ngx-parallax';
 		ReactiveFormsModule,
 		ParallaxModule
 	],
-	providers: [HttpClient, MailService],
+	providers: [
+		HttpClient,
+		MailService
+	],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}
