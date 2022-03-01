@@ -1,3 +1,17 @@
 @import '/src/styles/colors.scss';
 @import '/src/styles/icons.scss';
-@import '/src/styles/sizes.scss';
+
+$size: 1rem;
+
+.align-center {
+	text-align: center;
+}
+.align-right {
+	text-align: right;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.spaced {
+	letter-spacing: $size / 2;
+}

@@ -1,9 +1,5 @@
 @import '/src/styles/default.scss';
 
-.header {
-	margin-bottom: $bigSize;
-}
-
 .header .logo {
 	width: 100%;
 	height: 100%;
@@ -13,7 +9,7 @@
 }
 
 .header .route {
-	padding: $defaultSize 0;
+	padding: $size 0;
 	color: $mainColor2;
 	text-align: center;
 	text-decoration: none;
@@ -22,7 +18,7 @@
 	cursor: pointer;
 }
 .header .route span {
-	padding: $extraSmallSize;
+	padding: $size / 4;
 }
 .header .route:hover {
 	color: $mainColor1;
@@ -30,5 +26,5 @@
 .header .route:active {
 }
 .header .route.active span {
-	border-bottom: $extraSmallSize $extraColor solid;
+	border-bottom: $size / 4 $extraColor solid;
 }

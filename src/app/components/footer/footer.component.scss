@@ -1,13 +1,13 @@
 @import '/src/styles/default.scss';
 
 .footer-placeholder {
-	height: $bigSize + $smallSize;
+	height: $size * 2.5;
 }
+
 .footer {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	padding: $smallSize;
 	background-color: $backgroundColor;
-	box-shadow: 0 0 $bigSize $backgroundColor;
+	box-shadow: 0 0 ($size * 2) $backgroundColor;
 }

@@ -1,7 +1,7 @@
 @import '/src/styles/default.scss';
 
 .parallax {
-	height: $defaultSize * 25;
+	height: $size * 25;
 	position: relative;
 	overflow: hidden;
 }
