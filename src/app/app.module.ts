@@ -17,29 +17,26 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ParallaxModule } from 'ngx-parallax';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AProposComponent,
-    TarifsComponent,
-    GalerieComponent,
-    ContactComponent,
-    CgvComponent,
-    HeaderComponent,
-    FooterComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    ParallaxModule
-  ],
-  providers: [
-    HttpClient,
-    MailService
-  ],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		HomeComponent,
+		AProposComponent,
+		TarifsComponent,
+		GalerieComponent,
+		ContactComponent,
+		CgvComponent,
+		HeaderComponent,
+		FooterComponent,
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		HttpClientModule,
+		FormsModule,
+		ReactiveFormsModule,
+		ParallaxModule
+	],
+	providers: [HttpClient, MailService],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
