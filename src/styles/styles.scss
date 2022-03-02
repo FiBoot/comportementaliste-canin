@@ -15,3 +15,8 @@ body {
 * {
   transition: background-color .1s linear;
 }
+
+// fix gmap
+.mapouter, .gmap_canvas {
+  width: auto !important;
+}
