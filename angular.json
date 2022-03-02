@@ -30,7 +30,8 @@
               "src/assets/favicon.ico",
               "src/assets/logo.jpg",
               "src/assets/parallax.jpg",
-              "src/assets/tarif-card.png"
+              "src/assets/tarif-card.png",
+              "src/assets/loading-image.png"
             ],
             "styles": [
               "src/styles/styles.scss",

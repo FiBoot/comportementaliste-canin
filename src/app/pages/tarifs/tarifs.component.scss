@@ -1,5 +1,5 @@
 @import '/src/styles/default.scss';
 
 .title {
-    border-bottom: ($size / 4) solid $extraColor;
+    border-bottom: calc($size / 4) solid $extraColor;
 }

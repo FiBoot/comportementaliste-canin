@@ -13,5 +13,5 @@ $size: 1rem;
 	text-transform: uppercase;
 }
 .spaced {
-	letter-spacing: $size / 2;
+	letter-spacing: calc($size / 2);
 }

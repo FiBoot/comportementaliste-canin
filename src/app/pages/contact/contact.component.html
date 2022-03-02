@@ -1,132 +1,138 @@
 <div class="container">
-	<form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label>Nom</label>
-				<input
-					formControlName="lastname"
-					class="form-control"
-					[class.is-invalid]="isControlValid('lastname')"
-					placeholder="Doe"
-					required
-				/>
-			</div>
-			<div class="form-group col-md-6">
-				<label>Prénom</label>
-				<input
-					formControlName="firstname"
-					class="form-control"
-					[class.is-invalid]="isControlValid('firstname')"
-					placeholder="John"
-					required
-				/>
-			</div>
-		</div>
-
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label>Email</label>
-				<input
-					formControlName="email"
-					class="form-control"
-					[class.is-invalid]="isControlValid('email')"
-					placeholder="john.doe@gmail.com"
-					required
-				/>
-			</div>
-			<div class="form-group col-md-6">
-				<label>Téléphone</label>
-				<input
-					formControlName="phone_number"
-					class="form-control"
-					[class.is-invalid]="isControlValid('phone_number')"
-					placeholder="0123456789"
-					required
-				/>
-			</div>
-		</div>
-
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label>Race du chien</label>
-				<input
-					formControlName="dog_bread"
-					class="form-control"
-					[class.is-invalid]="isControlValid('dog_bread')"
-					placeholder="Ratier"
-					required
-				/>
-			</div>
-			<div class="form-group col-md-6">
-				<label>Age du chien</label>
-				<input
-					formControlName="dog_age"
-					type="number"
-					class="form-control"
-					[class.is-invalid]="isControlValid('dog_age')"
-					placeholder="3"
-					required
-				/>
-			</div>
-		</div>
-
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label>Adresse</label>
-				<input
-					formControlName="address"
-					class="form-control"
-					[class.is-invalid]="isControlValid('address')"
-					placeholder="1 rue de la paix"
-					required
-				/>
-			</div>
-			<div class="form-group col-md-3">
-				<label>Ville</label>
-				<input
-					formControlName="city"
-					class="form-control"
-					[class.is-invalid]="isControlValid('city')"
-					placeholder="Paris"
-					required
-				/>
-			</div>
-			<div class="form-group col-md-3">
-				<label>Code postal</label>
-				<input
-					formControlName="zipcode"
-					class="form-control"
-					[class.is-invalid]="isControlValid('zipcode')"
-					placeholder="75000"
-					required
-				/>
-			</div>
-		</div>
-
-		<div class="form-group">
-			<label>Message</label>
-			<textarea
-				formControlName="message"
-				class="form-control"
-				[class.is-invalid]="isControlValid('message')"
-				placeholder="Message"
-				required
-			></textarea>
-			<small id="emailHelp" class="form-text text-muted">
-				<b>Indiquez si vous avez des enfants, personnes faibles ou en situation de handicap</b>
-			</small>
-		</div>
-
-		<div class="form-row">
-			<div class="form-group col-8">
-				<div class="form-check">
-					<input formControlName="emergency" class="form-check-input" type="checkbox" id="emergency" />
-					<label class="form-check-label" for="emergency">Situation dangereuse ou d'urgence ?</label>
+	<div class="row">
+		<div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-sm-12 offset-sm-0">
+			<form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
+				<div class="form-row">
+					<div class="form-group col-sm-6">
+						<label>Nom</label>
+						<input
+							formControlName="lastname"
+							class="form-control"
+							[class.is-invalid]="isControlValid('lastname')"
+							placeholder="Doe"
+							required
+						/>
+					</div>
+					<div class="form-group col-sm-6">
+						<label>Prénom</label>
+						<input
+							formControlName="firstname"
+							class="form-control"
+							[class.is-invalid]="isControlValid('firstname')"
+							placeholder="John"
+							required
+						/>
+					</div>
 				</div>
-			</div>
-			<div class="form-group col-4 align-right">
-				<button type="submit" class="btn btn-success" [disabled]="sendingForm">Send</button>
-			</div>
+
+				<div class="form-row">
+					<div class="form-group col-sm-6">
+						<label>Email</label>
+						<input
+							formControlName="email"
+							class="form-control"
+							[class.is-invalid]="isControlValid('email')"
+							placeholder="john.doe@gmail.com"
+							required
+						/>
+					</div>
+					<div class="form-group col-sm-6">
+						<label>Téléphone</label>
+						<input
+							formControlName="phone_number"
+							class="form-control"
+							[class.is-invalid]="isControlValid('phone_number')"
+							placeholder="0123456789"
+							required
+						/>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group col-sm-6">
+						<label>Race du chien</label>
+						<input
+							formControlName="dog_bread"
+							class="form-control"
+							[class.is-invalid]="isControlValid('dog_bread')"
+							placeholder="Ratier"
+							required
+						/>
+					</div>
+					<div class="form-group col-sm-6">
+						<label>Age du chien</label>
+						<input
+							formControlName="dog_age"
+							type="number"
+							class="form-control"
+							[class.is-invalid]="isControlValid('dog_age')"
+							placeholder="3"
+							required
+						/>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group col-sm-6">
+						<label>Adresse</label>
+						<input
+							formControlName="address"
+							class="form-control"
+							[class.is-invalid]="isControlValid('address')"
+							placeholder="1 rue de la paix"
+							required
+						/>
+					</div>
+					<div class="form-group col-sm-3 col-6">
+						<label>Ville</label>
+						<input
+							formControlName="city"
+							class="form-control"
+							[class.is-invalid]="isControlValid('city')"
+							placeholder="Paris"
+							required
+						/>
+					</div>
+					<div class="form-group col-sm-3 col-6">
+						<label>Code postal</label>
+						<input
+							formControlName="zipcode"
+							class="form-control"
+							[class.is-invalid]="isControlValid('zipcode')"
+							placeholder="75000"
+							required
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label>Message</label>
+					<textarea
+						formControlName="message"
+						class="form-control"
+						[class.is-invalid]="isControlValid('message')"
+						placeholder="Message"
+						required
+					></textarea>
+					<small id="emailHelp" class="form-text text-muted">
+						<b>Indiquez si vous avez des enfants, personnes faibles ou en situation de handicap</b>
+					</small>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group col-8">
+						<div class="form-check">
+							<input formControlName="emergency" class="form-check-input" type="checkbox" id="emergency" />
+							<label class="form-check-label" for="emergency">Situation dangereuse ou d'urgence ?</label>
+						</div>
+					</div>
+					<div class="form-group col-4 align-right">
+						<button type="submit" class="btn btn-success" [disabled]="sendingForm">
+							{{ sendingForm ? 'Envoi...' : 'Envoyer' }}
+						</button>
+					</div>
+				</div>
+			</form>
 		</div>
-	</form>
+	</div>
 </div>

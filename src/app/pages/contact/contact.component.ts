@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, TemplateRef, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { MailService } from 'src/app/services/mail.service';
+import { MailService } from 'src/app/services/mail/mail.service';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { MailConfirmationModalComponent } from 'src/app/components/mail-confirmation-modal/mail-confirmation-modal.component';
+import { MailErrorModalComponent } from 'src/app/components/mail-error-modal/mail-error-modal.component';
 
 @Component({
 	selector: 'app-contact',
@@ -8,6 +11,9 @@ import { MailService } from 'src/app/services/mail.service';
 	styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
+	private formTouched: boolean = false;
+	private modalRef: BsModalRef | undefined;
+
 	public contactForm = new FormGroup({
 		lastname: new FormControl('', Validators.required),
 		firstname: new FormControl('', Validators.required),
@@ -22,9 +28,12 @@ export class ContactComponent {
 		emergency: new FormControl(false),
 	});
 	public sendingForm: boolean = false;
-	private formTouched: boolean = false;
 
-	constructor(private mailService: MailService) {}
+	constructor(private mailService: MailService, private modalService: BsModalService) {}
+
+	openModal(success: boolean) {
+		this.modalRef = this.modalService.show(success ? MailConfirmationModalComponent : MailErrorModalComponent);
+	}
 
 	public isControlValid(controlName: string): boolean {
 		const touched = this.contactForm.controls[controlName].touched || this.formTouched;
@@ -34,11 +43,12 @@ export class ContactComponent {
 
 	public onSubmit(form: FormGroup): void {
 		this.formTouched = true;
-		// if (form.valid) {
-		this.sendingForm = true;
-		this.mailService.sendFormContactMail(form).then((response) => {
-			this.sendingForm = false;
-		});
-		// }
+		if (form.valid) {
+			this.sendingForm = true;
+			this.mailService.sendFormContactMail(form).then((response) => {
+				this.sendingForm = false;
+				this.openModal(response);
+			});
+		}
 	}
 }

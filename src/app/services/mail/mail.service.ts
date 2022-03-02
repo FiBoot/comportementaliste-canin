@@ -10,18 +10,15 @@ export class MailService {
 	constructor(private http: HttpClient) {}
 
 	public sendFormContactMail(form: FormGroup): Promise<boolean> {
-    return new Promise(res => {
-      setTimeout(() => {
-        res(true)
-      }, 1000)
-    })
 		const body = JSON.stringify(form.value);
-		console.log(`Sending to ${environment.emailEndpoint}: ${body}`);
-		return new Promise((resolve, reject) => {
-			this.http.post(environment.emailEndpoint, body).subscribe((response) => {
-				console.warn(response);
-				resolve(true);
-			});
-		});
+		return new Promise((resolve) =>
+			this.http.post(environment.emailEndpoint, body).subscribe({
+				error: (e) => {
+					// log e ?
+					resolve(false);
+				},
+				complete: () => resolve(true),
+			})
+		);
 	}
 }
