@@ -1,0 +1,6 @@
+@import '/src/styles/default.scss';
+
+.portrait {
+    height: $size * 30;
+    background-image: url('/assets/portrait.jpg');
+}

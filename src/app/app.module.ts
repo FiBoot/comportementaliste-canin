@@ -35,7 +35,7 @@ import { MailErrorModalComponent } from './components/mail-error-modal/mail-erro
 		FooterComponent,
 		TarifCardComponent,
 		MailConfirmationModalComponent,
-  MailErrorModalComponent,
+		MailErrorModalComponent,
 	],
 	imports: [
 		BrowserModule,

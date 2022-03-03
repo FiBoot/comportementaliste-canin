@@ -1,13 +1,6 @@
 <div class="container">
 	<div *ngIf="loading" class="row">
-		<div *ngFor="let i of [].constructor(placeholderNumber)" class="col-md-6 col-xl-4">
-			<div class="card mb-3">
-				<img class="card-img-top" src="/assets/loading-image.png" alt="loading-image" />
-				<div class="card-body px-3 py-2">
-					<p class="card-text"></p>
-				</div>
-			</div>
-		</div>
+		loading..
 	</div>
 	<div *ngIf="!loading" class="row">
 		<div *ngFor="let media of gallerie" class="col-md-6 col-xl-4">

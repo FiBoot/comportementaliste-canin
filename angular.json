@@ -31,7 +31,7 @@
               "src/assets/logo.jpg",
               "src/assets/parallax.jpg",
               "src/assets/tarif-card.png",
-              "src/assets/loading-image.png"
+              "src/assets/portrait.jpg"
             ],
             "styles": [
               "src/styles/styles.scss",
