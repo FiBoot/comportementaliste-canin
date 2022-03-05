@@ -8,14 +8,14 @@ const tmp_example = [
 		id: '17985400504459172',
 		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
 		media_url:
-			'https://scontent.cdninstagram.com/v/t51.29350-15/274916176_482044603412787_7091291151398266612_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8ae9d6&_nc_ohc=-6ug5O5wrcYAX_dzkkP&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AT8yX1dz5NF245_AdKSPpe3EYeM_jnaimS_gsO5NORORJA&oe=62239C01',
+			'https://wompampsupport.azureedge.net/fetchimage?siteId=7575&v=2&jpgQuality=100&width=700&url=https%3A%2F%2Fi.kym-cdn.com%2Fentries%2Ficons%2Fmobile%2F000%2F013%2F564%2Fdoge.jpg',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
 	{
 		caption: 'caption 2',
 		id: '17985400504459172',
 		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
-		media_url: 'http://letakol.free.fr/fiboot/images/84f15d4c1b17042cf8b5e3975e195bec.png',
+		media_url: 'https://m.media-amazon.com/images/I/71HTNz6VqfL._SS500_.jpg',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
 	{
@@ -23,7 +23,7 @@ const tmp_example = [
 		id: '17985400504459172',
 		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
 		media_url:
-			'http://letakol.free.fr/fiboot/images/5d4424539de95cb888a908b36921e975.png',
+			'https://www.cointribune.com/app/uploads/2021/09/doge-hikayesi-devam-ediyor-elon-musk-tweet-atti-dogecoin-yuzde-80-yukseldi-1-e1616049750159.jpg?nowebp',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
 	{
@@ -31,7 +31,7 @@ const tmp_example = [
 		id: '17985400504459172',
 		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
 		media_url:
-			'http://letakol.free.fr/fiboot/images/b2b3d5ebca31939c1f478777787f08fe.png',
+			'https://stormgain.com/sites/default/files/news/DOGE.jpg',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
 	{
@@ -39,7 +39,7 @@ const tmp_example = [
 		id: '17985400504459172',
 		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
 		media_url:
-			'http://letakol.free.fr/fiboot/images/3aa756a65ac0f22505cba6c8198164b0.jpeg',
+			'https://itsocial.fr/wp-content/uploads/2018/01/dogecoin-logo.jpg',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
 	{
@@ -47,7 +47,7 @@ const tmp_example = [
 		id: '17985400504459172',
 		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
 		media_url:
-			'http://letakol.free.fr/fiboot/images/bf3b2f89b3b8cfb365cd653b536e9332.jpeg',
+			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO0v6Qz0Jx3AoWbcoh9GOk5vY-966PuYO1NTLcq077IneGy9Lm_lwGmuN4ospx_FBTWfw&usqp=CAU',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
 	{
@@ -55,7 +55,7 @@ const tmp_example = [
 		id: '17985400504459172',
 		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
 		media_url:
-			'http://letakol.free.fr/fiboot/images/c13a1201f43556647656431fb2ad0553.jpeg',
+			'https://cdn.decrypt.co/wp-content/uploads/2021/08/dogecoin-dog-meme-coins-tokens-gID_4.jpg',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
 	{
@@ -63,7 +63,7 @@ const tmp_example = [
 		id: '17985400504459172',
 		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
 		media_url:
-			'http://letakol.free.fr/fiboot/images/157f5a4bc0d3c5f6def60116325cfe6a.jpeg',
+			'https://s.yimg.com/uu/api/res/1.2/t.A2PxsesZoFMaddm4vjpQ--~B/aD00MDA7dz03Mjg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/investorplace_417/6185f321c691407cfed56e2f901ccc21',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
 	{
@@ -71,7 +71,7 @@ const tmp_example = [
 		id: '17985400504459172',
 		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
 		media_url:
-			'http://letakol.free.fr/fiboot/images/ed52e80bf7bfdef210e021cbcc53bc37.jpeg',
+			'https://g.foolcdn.com/editorial/images/655481/shiba-inu-dogecoin.jpg',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
 	{
@@ -79,7 +79,7 @@ const tmp_example = [
 		id: '17985400504459172',
 		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
 		media_url:
-			'http://letakol.free.fr/fiboot/images/4fc1e46794a913a1abf1f00091c5cd67.jpeg',
+			'https://cryptonewsbtc.org/wp-content/uploads/2022/02/shiba-inu-shib-dogecoin-doge-cryptocurrency-blockchain-invest-token-dog-getty.jpg',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
 	{
@@ -87,7 +87,7 @@ const tmp_example = [
 		id: '17985400504459172',
 		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
 		media_url:
-			'http://letakol.free.fr/fiboot/images/23ac74becbf9c692550e1ce9bd77e9dc.jpeg',
+			'https://www.arover.net/wp-content/uploads/2021/12/Elon-Musk-Argues-Dogecoin-DOGE-Is-Ideal-For-Trading-Over.jpg',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
 ];

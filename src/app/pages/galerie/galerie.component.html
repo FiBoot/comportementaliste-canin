@@ -1,21 +1,20 @@
 <div class="container">
-	<div *ngIf="loading" class="row">
-		loading..
-	</div>
+	<div *ngIf="loading" class="row">loading..</div>
 	<div *ngIf="!loading" class="row">
 		<div *ngFor="let media of gallerie" class="col-md-6 col-xl-4">
 			<div class="card mb-3">
 				<a
+					class="background-image"
 					[href]="media.permalink"
+					[style.background-image]="'url(' + media.media_url + ')'"
 					target="_blank"
 					data-toggle="tooltip"
 					data-placement="right"
 					title="Voir sur Instagram"
 				>
-					<img class="card-img-top" [src]="media.media_url" [alt]="media.id" />
 				</a>
 				<div class="card-body px-3 py-2">
-					<p class="card-text">{{ media.caption }}</p>
+					<p class="card-text align-center">{{ media.caption }}</p>
 				</div>
 			</div>
 		</div>

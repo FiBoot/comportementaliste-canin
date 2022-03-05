@@ -1,0 +1,12 @@
+@import '/src/styles/default.scss';
+
+.card .background-image {
+    height: $size * 15;
+}
+
+.card:hover {
+    border-color: $color2;
+}
+.card:hover .card-text {
+    color: $color2;
+}
