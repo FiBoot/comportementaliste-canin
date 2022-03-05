@@ -1,9 +1,10 @@
-import { Component, ElementRef, TemplateRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MailService } from 'src/app/services/mail/mail.service';
-import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { BsModalService } from 'ngx-bootstrap/modal';
 import { MailConfirmationModalComponent } from 'src/app/components/mail-confirmation-modal/mail-confirmation-modal.component';
 import { MailErrorModalComponent } from 'src/app/components/mail-error-modal/mail-error-modal.component';
+import { CAPTCHA } from 'src/environments/captcha';
 
 @Component({
 	selector: 'app-contact',
@@ -12,7 +13,7 @@ import { MailErrorModalComponent } from 'src/app/components/mail-error-modal/mai
 })
 export class ContactComponent {
 	private formTouched: boolean = false;
-	private modalRef: BsModalRef | undefined;
+	public siteKey = CAPTCHA.siteKey;
 
 	public contactForm = new FormGroup({
 		lastname: new FormControl('', Validators.required),
@@ -26,13 +27,19 @@ export class ContactComponent {
 		phone_number: new FormControl('', [Validators.pattern(/^\+?(\d{2} ?){5}$/), Validators.required]),
 		message: new FormControl('', Validators.required),
 		emergency: new FormControl(false),
+		recaptcha: new FormControl(null, Validators.required),
 	});
+	public captchaLoaded: boolean = false;
 	public sendingForm: boolean = false;
 
 	constructor(private mailService: MailService, private modalService: BsModalService) {}
 
-	openModal(success: boolean) {
-		this.modalRef = this.modalService.show(success ? MailConfirmationModalComponent : MailErrorModalComponent);
+	public handleLoad(): void {
+		this.captchaLoaded = true;
+	}
+
+	public openModal(success: boolean) {
+		this.modalService.show(success ? MailConfirmationModalComponent : MailErrorModalComponent);
 	}
 
 	public isControlValid(controlName: string): boolean {
@@ -43,11 +50,10 @@ export class ContactComponent {
 
 	public onSubmit(form: FormGroup): void {
 		this.formTouched = true;
-		if (form.valid) {
+		if (!this.sendingForm && form.valid) {
 			this.sendingForm = true;
 			this.mailService.sendFormContactMail(form).then((response) => {
 				this.sendingForm = false;
-				this.openModal(response);
 			});
 		}
 	}

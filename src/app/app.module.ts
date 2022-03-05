@@ -21,6 +21,7 @@ import { TarifCardComponent } from './components/tarif-card/tarif-card.component
 import { InstagramService } from './services/instagram/instagram.service';
 import { MailConfirmationModalComponent } from './components/mail-confirmation-modal/mail-confirmation-modal.component';
 import { MailErrorModalComponent } from './components/mail-error-modal/mail-error-modal.component';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 @NgModule({
 	declarations: [
@@ -42,9 +43,10 @@ import { MailErrorModalComponent } from './components/mail-error-modal/mail-erro
 		AppRoutingModule,
 		HttpClientModule,
 		FormsModule,
+		ModalModule.forRoot(),
 		ReactiveFormsModule,
 		ParallaxModule,
-		ModalModule.forRoot(),
+		NgxCaptchaModule,
 		// anti autoformat line
 	],
 	providers: [

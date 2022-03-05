@@ -1,0 +1,14 @@
+.captcha-placeholder {
+    height: 74px;
+    width: 302px;
+    background-color: #f9f9f9;
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 1px rgb(0 0 0 / 8%);
+    -webkit-box-shadow: 0 0 4px 1px rgb(0 0 0 / 8%);
+}
+
+.invalid-feedback {
+    display: block;
+    font-weight: bold;
+}
