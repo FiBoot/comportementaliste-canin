@@ -99,7 +99,7 @@ export class InstagramService {
 	constructor(private http: HttpClient) {}
 
 	public getFeed(): Promise<IInstagramMedia[]> {
-    // TMP
+    	// TMP
 		return new Promise((resolve) => {
 			setTimeout(() => resolve(tmp_example), 1500);
 		});

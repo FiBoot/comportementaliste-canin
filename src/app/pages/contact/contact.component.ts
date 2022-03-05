@@ -53,6 +53,7 @@ export class ContactComponent {
 		if (!this.sendingForm && form.valid) {
 			this.sendingForm = true;
 			this.mailService.sendFormContactMail(form).then((response) => {
+				this.openModal(response);
 				this.sendingForm = false;
 			});
 		}

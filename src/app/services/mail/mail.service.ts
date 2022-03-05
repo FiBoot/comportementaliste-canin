@@ -13,8 +13,8 @@ export class MailService {
 		const body = JSON.stringify(form.value);
 		return new Promise((resolve) =>
 			this.http.post(environment.emailEndpoint, body).subscribe({
-				error: (e) => {
-					// log e ?
+				error: (err: Error) => {
+					console.log('[MailService] Error: ' + err.message);
 					resolve(false);
 				},
 				complete: () => resolve(true),
