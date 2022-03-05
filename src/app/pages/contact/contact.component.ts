@@ -12,9 +12,7 @@ import { CAPTCHA } from 'src/environments/captcha';
 	styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
-	private formTouched: boolean = false;
 	public siteKey = CAPTCHA.siteKey;
-
 	public contactForm = new FormGroup({
 		lastname: new FormControl('', Validators.required),
 		firstname: new FormControl('', Validators.required),
@@ -27,8 +25,9 @@ export class ContactComponent {
 		phone_number: new FormControl('', [Validators.pattern(/^\+?(\d{2} ?){5}$/), Validators.required]),
 		message: new FormControl('', Validators.required),
 		emergency: new FormControl(false),
-		recaptcha: new FormControl(null, Validators.required),
 	});
+	public recaptcha: FormControl = new FormControl(null, Validators.required);
+	public formTouched: boolean = false;
 	public captchaLoaded: boolean = false;
 	public sendingForm: boolean = false;
 
@@ -50,7 +49,7 @@ export class ContactComponent {
 
 	public onSubmit(form: FormGroup): void {
 		this.formTouched = true;
-		if (!this.sendingForm && form.valid) {
+		if (!this.sendingForm && form.valid && this.recaptcha.valid) {
 			this.sendingForm = true;
 			this.mailService.sendFormContactMail(form).then((response) => {
 				this.openModal(response);

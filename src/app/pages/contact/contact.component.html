@@ -126,14 +126,14 @@
 					<div class="col-sm-6 pb-3">
 						<div *ngIf="!captchaLoaded" class="captcha-placeholder"></div>
 						<ngx-recaptcha2
-							formControlName="recaptcha"
+							[formControl]="recaptcha"
 							[siteKey]="siteKey"
 							[useGlobalDomain]="false"
 							[class.is-invalid]="true"
 							(load)="handleLoad()"
 						>
 						</ngx-recaptcha2>
-						<div *ngIf="isControlValid('recaptcha')" class="invalid-feedback">Captcha non-resolu</div>
+						<div *ngIf="formTouched && recaptcha.errors" class="invalid-feedback">Captcha non-resolu</div>
 					</div>
 					<div class="col-sm-6 align-right">
 						<button type="submit" class="btn btn-success" [disabled]="sendingForm">
