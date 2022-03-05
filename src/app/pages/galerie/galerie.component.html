@@ -1,5 +1,7 @@
 <div class="container">
-	<div *ngIf="loading" class="row">loading..</div>
+	<div class="align-center">
+		<h4 *ngIf="loading" class="spaced uppercase pt-5">chargement de la gallerie</h4>
+	</div>
 	<div *ngIf="!loading" class="row">
 		<div *ngFor="let media of gallerie" class="col-md-6 col-xl-4">
 			<div class="card mb-3">

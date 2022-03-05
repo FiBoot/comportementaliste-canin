@@ -30,16 +30,14 @@ const tmp_example = [
 		caption: 'nom nom',
 		id: '17985400504459172',
 		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
-		media_url:
-			'https://stormgain.com/sites/default/files/news/DOGE.jpg',
+		media_url: 'https://stormgain.com/sites/default/files/news/DOGE.jpg',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
 	{
 		caption: 'chat',
 		id: '17985400504459172',
 		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
-		media_url:
-			'https://itsocial.fr/wp-content/uploads/2018/01/dogecoin-logo.jpg',
+		media_url: 'https://itsocial.fr/wp-content/uploads/2018/01/dogecoin-logo.jpg',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
 	{
@@ -54,8 +52,7 @@ const tmp_example = [
 		caption: 'rat2',
 		id: '17985400504459172',
 		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
-		media_url:
-			'https://cdn.decrypt.co/wp-content/uploads/2021/08/dogecoin-dog-meme-coins-tokens-gID_4.jpg',
+		media_url: 'https://cdn.decrypt.co/wp-content/uploads/2021/08/dogecoin-dog-meme-coins-tokens-gID_4.jpg',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
 	{
@@ -70,8 +67,7 @@ const tmp_example = [
 		caption: 'rat4',
 		id: '17985400504459172',
 		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
-		media_url:
-			'https://g.foolcdn.com/editorial/images/655481/shiba-inu-dogecoin.jpg',
+		media_url: 'https://g.foolcdn.com/editorial/images/655481/shiba-inu-dogecoin.jpg',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
 	{
@@ -90,18 +86,34 @@ const tmp_example = [
 			'https://www.arover.net/wp-content/uploads/2021/12/Elon-Musk-Argues-Dogecoin-DOGE-Is-Ideal-For-Trading-Over.jpg',
 		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
 	},
+	{
+		caption: 'oui',
+		id: '17985400504459172',
+		media_type: INSTAGRAM_MEDIA_TYPE.IMAGE,
+		media_url:
+			'https://ih1.redbubble.net/image.516095236.7032/flat,800x800,075,f.jpg',
+		permalink: 'https://www.instagram.com/p/Cak5BoxMFos/',
+	},
 ];
 
 @Injectable({
 	providedIn: 'root',
 })
 export class InstagramService {
+	private cachedData: IInstagramMedia[] | null = null;
+
 	constructor(private http: HttpClient) {}
 
-	public getFeed(): Promise<IInstagramMedia[]> {
-    	// TMP
+	private requestFeed(): Promise<IInstagramMedia[]> {
 		return new Promise((resolve) => {
-			setTimeout(() => resolve(tmp_example), 1500);
+			setTimeout(() => {
+				this.cachedData = tmp_example;
+				resolve(tmp_example);
+			}, 1500);
 		});
+	}
+
+	public getFeed(): Promise<IInstagramMedia[]> {
+		return this.cachedData ? Promise.resolve(this.cachedData) : this.requestFeed();
 	}
 }
