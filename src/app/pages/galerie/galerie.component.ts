@@ -9,15 +9,15 @@ import { InstagramService } from 'src/app/services/instagram/instagram.service';
 })
 export class GalerieComponent implements OnInit {
 	public gallerie: IInstagramMedia[] = [];
-  public loading: boolean = true;
-  public placeholderNumber: number = 9;
+	public loading: boolean = true;
+	public placeholderNumber: number = 9;
 
 	constructor(private instagramService: InstagramService) {}
 
 	ngOnInit(): void {
 		this.instagramService.getFeed().then((result) => {
-      this.gallerie = result
-      this.loading = false;
-    });
+			this.gallerie = result;
+			this.loading = false;
+		});
 	}
 }
