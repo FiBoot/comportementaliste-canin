@@ -1,25 +1,31 @@
-<div class="header">
-	<div class="row">
-		<div class="col">
-			<a [routerLink]="''">
-				<div class="logo background-image"></div>
+<div class="container-fluid">
+	<div class="header">
+		<div class="row">
+			<div class="col-1 p-0">
+				<a [routerLink]="''">
+					<div class="logo background-image"></div>
+				</a>
+			</div>
+			<a class="route col" [class.active]="isActive('home')" [routerLink]="'home'">
+				<span>accueil</span>
 			</a>
+			<a class="route col" [class.active]="isActive('a-propos')" [routerLink]="'a-propos'">
+				<span>a propos</span>
+			</a>
+			<a class="route col" [class.active]="isActive('tarifs')" [routerLink]="'tarifs'">
+				<span class="d-xl-none">tarifs</span>
+				<span class="d-none d-xl-inline">prestations et services</span>
+			</a>
+			<!--
+			<a class="route col" [class.active]="isActive('galerie')" [routerLink]="'galerie'">
+				<span>galerie</span>
+			</a>
+			-->
+			<a class="route col" [class.active]="isActive('contact')" [routerLink]="'contact'">
+				<span>contact</span>
+			</a>
+			<div class="col-1"></div>
 		</div>
-		<a class="route col" [class.active]="isActive('a-propos')" [routerLink]="'a-propos'">
-			<span>a propos</span>
-		</a>
-		<a class="route col" [class.active]="isActive('tarifs')" [routerLink]="'tarifs'">
-			<span class="d-xl-none">tarifs</span>
-			<span class="d-none d-xl-inline">prestations et services</span>
-		</a>
-		<a class="route col" [class.active]="isActive('galerie')" [routerLink]="'galerie'">
-			<span>galerie</span>
-		</a>
-		<a class="route col" [class.active]="isActive('contact')" [routerLink]="'contact'">
-			<span>contact</span>
-		</a>
 	</div>
 </div>
-<div class="container py-4">
-	<div class="sep"></div>
-</div>
+

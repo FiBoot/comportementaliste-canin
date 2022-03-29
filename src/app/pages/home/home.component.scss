@@ -7,38 +7,10 @@
 }
 
 .parallax > .parallax-image {
-	background-image: url('https://tails.com/blog/fr/wp-content/uploads/sites/4/2022/01/chien-vitamines.jpg');
-}
-
-#map {
-	background: url('http://www.epi78-92.fr/fileadmin/user_upload/rubrique_EPI/carte.png');
-	background-repeat: no-repeat;
-	background-size: contain;
-}
-
-.title {
-	text-align: center;
-	font-weight: bold;
-	color: rgb(79, 3, 3);
-	background-color: rgb(206, 193, 230);
-}
-
-.text-content {
-	text-align: center;
-	color: rgb(79, 3, 3);
-	background-color: rgb(242, 234, 255);
-	margin-top: -.5em;
-	padding: 1em;
-}
-
-.intervention-text {
-	margin-top: 2em;
+	background-image: url('/assets/parallax.jpg');
 }
 
 .map {
-	margin-top: 4em;
-}
-
-.container {
-	margin-top: 4em;
+	min-height: 15em;
+	background-image: url('/assets/yvelines.png');
 }

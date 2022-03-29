@@ -31,7 +31,8 @@
               "src/assets/logo.jpg",
               "src/assets/parallax.jpg",
               "src/assets/tarif-card.png",
-              "src/assets/portrait.jpg"
+              "src/assets/portrait.jpg",
+              "src/assets/yvelines.png"
             ],
             "styles": [
               "src/styles/styles.scss",

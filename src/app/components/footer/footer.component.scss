@@ -11,3 +11,8 @@
 	background-color: $backgroundColor;
 	box-shadow: 0 0 ($size * 2) $backgroundColor;
 }
+
+.footer a, .footer b {
+	color: $color7;
+	font-weight: bold;
+}
