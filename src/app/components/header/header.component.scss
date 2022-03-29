@@ -1,5 +1,9 @@
 @import '/src/styles/default.scss';
 
+.header .row {
+	background-color: $color7;
+}
+
 .header .logo {
 	background-image: url('/assets/logo.jpg');
 }
@@ -14,15 +18,8 @@
 }
 .header .route span {
 	padding: calc($size / 4);
+	color: $color8;
 }
-.header .route:hover span {
-	color: $color2;
-	border-color: $color2 !important;
-}
-// .header .route:active span {
-// 	color: $color3;
-// 	border-color: $color3 !important;
-// }
 .header .route.active span {
-	border-bottom: calc($size / 5) $color1 solid;
+	border-bottom: calc($size / 5) $color8 solid;
 }
