@@ -11,8 +11,10 @@
 .header .route {
 	padding: $size 0;
 	text-align: center;
-	text-decoration: none;
 	text-transform: uppercase;
+	text-decoration: none;
+	white-space: nowrap;
+	overflow: hidden;
 	font-weight: bold;
 	cursor: pointer;
 }
